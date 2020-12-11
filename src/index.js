@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Listing from "./Listings/Container/Listings"
 import reportWebVitals from './reportWebVitals';
-
+import {  ContextOneProvider } from './contexts/eventContext';
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ContextOneProvider>
+    <Listing />
+    </ContextOneProvider>,
   document.getElementById('root')
 );
 

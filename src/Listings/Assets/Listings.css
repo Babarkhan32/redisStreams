@@ -1,0 +1,15 @@
+.ListingCont .card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding-bottom: 0px;
+    padding-top: 21px;
+}
+.ListingCont .ant-form-item{
+    margin-bottom: 10px;
+}
+.ant-btn-icon-only > * {
+    font-size: 16px;
+    margin-bottom: 37px;
+}
