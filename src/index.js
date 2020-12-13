@@ -1,14 +1,17 @@
+/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Listing from "./Listings/Container/Listings"
+import Listing from "./Listings/Container/Listings";
 import reportWebVitals from './reportWebVitals';
-import {  ContextOneProvider } from './contexts/eventContext';
+import { ContextOneProvider } from './contexts/eventContext';
+
 ReactDOM.render(
   <ContextOneProvider>
     <Listing />
-    </ContextOneProvider>,
-  document.getElementById('root')
+  </ContextOneProvider>,
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

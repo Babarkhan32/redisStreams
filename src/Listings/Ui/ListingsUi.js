@@ -1,8 +1,8 @@
 import React from "react";
+import { Input, Form, Button } from "antd";
 import style from "../Assets/Listings.module.css";
 import "../Assets/Listings.css";
 import ListingItemUi from "./ListingItemUi";
-import { Input, Form, Button } from "antd";
 
 const { Search } = Input;
 const ListingsUi = (props) => {
@@ -27,6 +27,7 @@ const ListingsUi = (props) => {
                     </Form.Item>
                     <Form.Item name="resume">
                       <Button
+                        // eslint-disable-next-line react/destructuring-assignment
                         onClick={props.onStartData}
                         type="primary"
                         size="medium"
@@ -39,23 +40,26 @@ const ListingsUi = (props) => {
                   </div>
                   <div className="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
                     <Form.Item name="search">
-                      <Search onPressEnter={(e)=>props.search(e.target.value)} placeholder="Search Text" allowClear />
+                      <Search
+                        onPressEnter={(e) => props.search(e.target.value)}
+                        placeholder="Search Text"
+                        allowClear
+                      />
                     </Form.Item>
                   </div>
                 </div>
               </div>
               <div className="card-body">
+
                 {props.eventsData.length > 0
-                  ? props.eventsData.map((event) => {
-                      return (
-                        <ListingItemUi
-                          Title={event}
-                          ID={"#c002ab"}
-                          textBefore={"12/10/2020 PK"}
-                          textAfter={"10:26:00 PM"}
-                        />
-                      );
-                    })
+                  ? props.eventsData.map((event) => (
+                    <ListingItemUi
+                      Title={event}
+                      ID="#c002ab"
+                      textBefore="12/10/2020 PK"
+                      textAfter="10:26:00 PM"
+                    />
+                  ))
                   : ""}
               </div>
             </Form>
